@@ -32,8 +32,23 @@ El proyecto **Gestor de Encuestas** es una aplicación web que permite a los usu
    cd backend
     npm install
     ```
+
+    
 3. **Configura la base de datos**
 
    Asegúrate de que tienes una base de datos MySQL llamada gestor_encuestas. Si no tienes, puedes crearla y ejecutar los scripts de migración para crear las tablas necesarias.
 
-4. **Configura la base de datos**
+
+4. **Ejecuta el servidor**
+
+Para iniciar el servidor backend:
+
+   ```bash
+   node --watch server.js
+   ```
+El servidor estará corriendo en http://localhost:3000.
+
+
+5. **Accede a la aplicación web**
+
+Abre index.html en el navegador para interactuar con el frontend.
