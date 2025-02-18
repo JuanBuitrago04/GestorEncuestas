@@ -52,3 +52,35 @@ El servidor estará corriendo en http://localhost:3000.
 5. **Accede a la aplicación web**
 
 Abre index.html en el navegador para interactuar con el frontend.
+
+## API Endpoints
+
+### 1. **POST /api/register**
+   - Registra un nuevo usuario.
+   - **Request**:
+     - `{ "username": "usuario123", "email": "usuario@ejemplo.com", "password": "contraseñaSegura123" }`
+   - **Response**:
+     - 201: Usuario creado correctamente.
+     - 400: Error, correo electrónico ya registrado.
+
+### 2. **POST /api/login**
+   - Inicia sesión y devuelve un token JWT.
+   - **Request**:
+     - `{ "email": "usuario@ejemplo.com", "password": "contraseñaSegura123" }`
+   - **Response**:
+     - 200: `{ "token": "<jwt_token>" }`
+     - 400: Credenciales incorrectas.
+
+### 3. **GET /api/surveys**
+   - Obtiene todas las encuestas disponibles.
+   - **Response**:
+     - 200: `{ surveys: [...] }`
+
+### 4. **POST /api/surveys/:id/response**
+   - Envía las respuestas a una encuesta específica.
+   - **Request**:
+     - `{ "answers": [{ "question_id": 1, "answer": "Sí" }, { "question_id": 2, "answer": "No" }] }`
+   - **Response**:
+     - 201: Respuestas guardadas correctamente.
+     - 400: Error al guardar respuestas.
+
